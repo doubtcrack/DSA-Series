@@ -21,8 +21,7 @@ public:
         while(i<j){
             if(str[i]!=str[j]) return false;
             else {
-                i++;
-                j--;
+                i++,j--;
             }
         }
         return true;
