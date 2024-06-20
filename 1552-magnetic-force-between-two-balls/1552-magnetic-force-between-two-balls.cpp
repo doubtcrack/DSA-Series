@@ -8,7 +8,7 @@ bool canPlaceBalls(vector<int>& position, int m, int minForce) {
             if (position[i] - last_position >= minForce) {
                 count++;
                 last_position = position[i];
-                if (count >= m) {
+                if (count == m) {
                     return true;
                 }
             }
