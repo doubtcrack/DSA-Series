@@ -1,16 +1,14 @@
 class Solution {
 public:
 bool canPlaceBalls(vector<int>& position, int m, int minForce) {
-    cout<<"\n"<< minForce<<" ";
         int count = 1;
         int last_position = position[0];
 
         for (int i = 1; i < position.size(); ++i) {
             if (position[i] - last_position >= minForce) {
                 count++;
-                cout<< count<<" "<<i<<": ";
                 last_position = position[i];
-                if (count == m) {
+                if (count >= m) {
                     return true;
                 }
             }
