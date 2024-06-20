@@ -1,6 +1,7 @@
 class Solution {
 public:
 bool canPlaceBalls(vector<int>& position, int m, int minForce) {
+    cout<<minForce<<"\n";
         int count = 1;
         int last_position = position[0];
 
