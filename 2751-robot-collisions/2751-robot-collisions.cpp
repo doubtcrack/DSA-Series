@@ -4,14 +4,13 @@ struct Robot {
     int position;
     int health;
     char direction;
-    int index; 
 };
     vector<int> survivedRobotsHealths(vector<int>& positions, vector<int>& healths, string directions) {
         int n = positions.size();
         vector<Robot> robots(n);
 
         for (int i = 0; i < n; ++i) {
-            robots[i] = {positions[i], healths[i], directions[i], i};
+            robots[i] = {positions[i], healths[i], directions[i]};
         }
 
         // Sort robots by position
@@ -46,13 +45,12 @@ struct Robot {
         }
     
         // Collect survivors
-        vector<int> result(n, -1);
+        vector<int> result;
         while (!st.empty()) {
             Robot robot = st.top();
             st.pop();
-            result[robot.index] = robot.health;
+            result.push_back(robot.health);
         }
-        result.erase(remove(result.begin(), result.end(), -1), result.end());
         return result;
     }
 };
