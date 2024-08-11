@@ -49,7 +49,7 @@ public:
         int m = grid[0].size();
         queue<pair<int, int>> q;
         q.push({x, y});
-        visited[x][y] = 1;
+        // visited[x][y] = 1;
         vector<pair<int, int>> directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         
         while (!q.empty()) {
